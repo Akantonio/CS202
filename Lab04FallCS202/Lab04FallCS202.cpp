@@ -1,7 +1,11 @@
 // Lab04FallCS202.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Adrian Antonio
 
 #include <iostream>
+using std::cin;
+using std::cout;
+
+#include <string>
 
 int main()
 {
