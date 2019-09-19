@@ -17,7 +17,7 @@ using std::fstream;
 int main()
 {	
 	string userIn;
-	ofstream file("writing.txt");
+	ofstream file("writing.txt",std::ios::app);
 
 	cout << "Give me number and write some text";
 	getline(cin, userIn);
