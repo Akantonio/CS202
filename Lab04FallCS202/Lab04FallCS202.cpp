@@ -19,6 +19,7 @@ int main()
 {	
 	string userIn;
 	string line;
+	int x;
 	ofstream file("writing.txt",std::ios::app);
 	ifstream ifile("writing.txt");
 	while (!ifile.eof()) {
