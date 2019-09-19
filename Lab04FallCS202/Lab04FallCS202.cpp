@@ -5,6 +5,9 @@
 using std::cin;
 using std::cout;
 #include <string>
+using std::getline;
+#include <sstream>
+using std::ostringstream;
 #include <fstream>
 using std::ofstream;
 using std::ifstream;
@@ -15,6 +18,9 @@ int main()
 	ofstream ofile("write.txt");
 
     ofile<< "Hello World!\n";
+	//ifstream ifile;
+	//ifile.open("writing.txt");
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
