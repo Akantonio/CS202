@@ -17,12 +17,12 @@ using std::fstream;
 int main()
 {	
 	string s = "Hello World!\n";
-	fstream file("writing.txt");
+	ofstream ofile("writing.txt");
+	ofile << s;
+
 
 	
-	
-	//ifstream ifile;
-	//ifile.open("writing.txt");
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
