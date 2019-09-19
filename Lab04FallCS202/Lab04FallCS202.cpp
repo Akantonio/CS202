@@ -4,12 +4,16 @@
 #include <iostream>
 using std::cin;
 using std::cout;
-
 #include <string>
+#include <fstream>
+using std::ofstream;
+using std::ifstream;
+using std::fstream;
 
 int main()
-{
-    std::cout << "Hello World!\n";
+{	
+	ofstream ofile("write.txt");
+    cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
