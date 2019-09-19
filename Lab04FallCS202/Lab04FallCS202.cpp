@@ -13,7 +13,8 @@ using std::fstream;
 int main()
 {	
 	ofstream ofile("write.txt");
-    cout << "Hello World!\n";
+
+    ofile<< "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
