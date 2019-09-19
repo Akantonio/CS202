@@ -16,11 +16,12 @@ using std::fstream;
 
 int main()
 {	
-	string s = "Hello World!\n";
-	ofstream ofile("writing.txt");
-	ofile << s;
+	string userIn;
+	ofstream file("writing.txt");
 
-
+	cout << "Give me number and write some text";
+	getline(cin, userIn);
+	
 	
 
 }
