@@ -4,6 +4,7 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 #include <string>
 using std::string;
 using std::getline;
@@ -17,10 +18,16 @@ using std::fstream;
 int main()
 {	
 	string userIn;
+	string line;
 	ofstream file("writing.txt",std::ios::app);
-
-	cout << "Give me number and write some text";
+	ifstream ifile("writing.txt");
+	while (!ifile.eof()) {
+		getline(ifile,line);
+		cout << line<< endl;
+	}
+	cout << "Give me number and write some text: ";
 	getline(cin, userIn);
+	file << userIn;
 	
 	
 
