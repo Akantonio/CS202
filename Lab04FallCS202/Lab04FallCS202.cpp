@@ -5,6 +5,7 @@
 using std::cin;
 using std::cout;
 #include <string>
+using std::string;
 using std::getline;
 #include <sstream>
 using std::ostringstream;
@@ -15,12 +16,13 @@ using std::fstream;
 
 int main()
 {	
-	ofstream ofile("write.txt");
+	string s = "Hello World!\n";
+	fstream file("writing.txt");
 
-    ofile<< "Hello World!\n";
+	
+	
 	//ifstream ifile;
 	//ifile.open("writing.txt");
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
