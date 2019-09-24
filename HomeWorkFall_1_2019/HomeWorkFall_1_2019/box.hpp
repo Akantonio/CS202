@@ -5,8 +5,10 @@ class Box {
 public:
 	Box();
 	Box(int& x, int& y);
-	void getWidth() const;
-	void getHeight()const;
+	int getWidth() const;
+	int getHeight()const;
+	void setWidth();
+	void setHeight();
 	
 private:
 	int _width;

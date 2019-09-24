@@ -5,18 +5,28 @@
 #include "box.hpp"
 
 
-Box::Box():_width(1),_height(1) 
+Box::Box():_width(1),_height(1)
 {
 }
 Box::Box(int & x, int &y):_width(x),_height(y)
 {
 }
 
-void Box::getWidth() const
+int Box::getWidth() const
+{
+	return _width;
+}
+
+int Box::getHeight() const
+{
+	return _height;
+}
+
+void Box::setWidth()
 {
 }
 
-void Box::getHeight() const
+void Box::setHeight()
 {
 }
 
