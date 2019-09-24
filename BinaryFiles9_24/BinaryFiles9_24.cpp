@@ -26,8 +26,10 @@ int main()
 		//ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
 		cout << v[0] << " ";
 	}
-	for (auto &i:v) {
-
+	for (auto i:v) {
+		double x = v[i];
+		int total =+ x;
+		cout << total;
 	}
 
 	
