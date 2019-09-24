@@ -9,7 +9,7 @@ using std::ifstream;
 int main()
 {
 	ifstream ifile;
-	ifile.open("data.dat");
+	ifile.open("data.dat",std::ios::out,std::ios::binary);
 
 	int x;
 
