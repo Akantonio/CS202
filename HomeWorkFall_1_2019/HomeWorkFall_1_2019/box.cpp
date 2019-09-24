@@ -5,6 +5,6 @@
 #include "box.hpp"
 
 
-class Box {
+void Box::Box() {
 
-};
+}
