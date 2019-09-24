@@ -22,12 +22,20 @@ int Box::getHeight() const
 	return _height;
 }
 
-void Box::setWidth()
+void Box::setWidth(int x)
 {
+
 }
 
-void Box::setHeight()
+void Box::setHeight(int x)
 {
+
+}
+
+string Box::type()
+{
+
+	return ;
 }
 
 
