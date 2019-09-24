@@ -3,3 +3,8 @@
 
 
 #include "box.hpp"
+
+
+class Box {
+
+};
