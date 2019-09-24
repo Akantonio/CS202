@@ -3,7 +3,7 @@
 
 class Box {
 public:
-	void Box();
+	Box();
 
 private:
 	int width;
