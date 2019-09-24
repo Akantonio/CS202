@@ -3,10 +3,12 @@
 
 #include <iostream>
 #include <fstream>
-
+using std::ifstream;
 
 int main()
 {
+	ifstream ifile;
+	ifile.open("data.dat");
 
     std::cout << "Hello World!\n";
 }
