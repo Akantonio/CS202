@@ -13,12 +13,11 @@ int main()
 	ifstream ifile;
 	ifile.open("data.dat",std::ios::in|std::ios::binary);
 
-	int x;
 	vector<int> v(100000);
 	while (true)
 	{
 
-		ifile.read(reinterpret_cast<char*>(&v[0]), sizeof(v));
+		ifile.read(reinterpret_cast<char*>(&v[0]), sizeof(int));
 		if (!ifile) {
 			if (ifile.eof()) {
 				break;
@@ -26,6 +25,9 @@ int main()
 		}
 		//ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
 		cout << v[0] << " ";
+	}
+	for (auto &i:v) {
+
 	}
 
 	
