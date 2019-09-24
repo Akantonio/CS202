@@ -6,9 +6,10 @@ public:
 	Box();
 	void getWidth() const;
 	void getHeight()const;
+	
 private:
-	int width;
-	int height;
+	int _width;
+	int _height;
 
 };
 
