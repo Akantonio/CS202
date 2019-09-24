@@ -8,3 +8,12 @@
 Box::Box() {
 
 }
+
+void Box::getWidth() const
+{
+}
+
+void Box::getHeight() const
+{
+}
+
