@@ -6,7 +6,8 @@ public:
 	void Box();
 
 private:
-
+	int width;
+	int height;
 
 };
 
