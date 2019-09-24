@@ -5,16 +5,31 @@
 using std::cout;
 #include <fstream>
 using std::ifstream;
+#include<vector>
+using std::vector;
 
 int main()
 {
 	ifstream ifile;
-	ifile.open("data.dat",std::ios::out,std::ios::binary);
+	ifile.open("data.dat",std::ios::in|std::ios::binary);
 
 	int x;
+	vector<int> v(100000);
+	while (true)
+	{
 
-	ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
-	cout << x;
+		ifile.read(reinterpret_cast<char*>(&v[0]), sizeof(v));
+		if (!ifile) {
+			if (ifile.eof()) {
+				break;
+			}
+		}
+		//ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
+		cout << v[0] << " ";
+	}
+
+	
+	
 
     cout << "Hello World!\n";
 }
