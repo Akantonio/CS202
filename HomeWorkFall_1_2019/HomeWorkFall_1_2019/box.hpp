@@ -4,6 +4,7 @@
 class Box {
 public:
 	Box();
+	Box(int& x, int& y);
 	void getWidth() const;
 	void getHeight()const;
 	
