@@ -2,6 +2,7 @@
 //Adrian Antonio
 
 #include <iostream>
+using std::cout;
 #include <fstream>
 using std::ifstream;
 
@@ -10,7 +11,12 @@ int main()
 	ifstream ifile;
 	ifile.open("data.dat");
 
-    std::cout << "Hello World!\n";
+	int x;
+
+	ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
+	cout << x;
+
+    cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
