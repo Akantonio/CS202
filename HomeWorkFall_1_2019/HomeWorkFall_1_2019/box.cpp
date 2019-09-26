@@ -61,9 +61,19 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	{
 		if (temp == y) 
 		{
-			for (int i = 1; i <= x; ++i) {
+			for (int i = 1; i <= x; ++i) 
+			{
 				s += "X";
 			}
+		}
+		else if(logic)
+		{
+			s += "X";
+			for (int i = 1; i <= (x - 2); ++i) 
+			{
+				s += " ";
+			}
+			s += "X";
 		}
 		s += "\n"; //Prints first line
 		--temp;
