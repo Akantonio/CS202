@@ -8,7 +8,7 @@
 Box::Box():_width(1),_height(1),_type(true)
 {
 }
-Box::Box(int & x, int &y):_width(x),_height(y)
+Box::Box(int & x, int &y,bool &z):_width(x),_height(y),_type(z)
 {
 }
 
