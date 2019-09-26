@@ -49,6 +49,21 @@ string Box::type() const //checks if it's true and false to send out either "Fil
 
 void Box::print(std::ostream & s) const
 {
-	s << "hello";
+	if (_type) 
+	{
+		s<< filled();
+	}else{
+
+	}
+}
+
+string Box::filled()
+{
+	return "";
+}
+
+string Box::hollow()
+{
+	return "";
 }
 
