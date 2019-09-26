@@ -59,7 +59,7 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	string s;
 	do
 	{
-		if (temp == y||logic) //beggining and the middle for filled box
+		if (temp == y||logic) //if temp is the same as y or its a filled  box 
 		{
 			for (int i = 1; i <= x; ++i) 
 			{
