@@ -20,8 +20,8 @@ private:
 	int _width;
 	int _height;
 	bool _type;
-	string filled();
-	string hollow();
+	string filled()const;
+	string hollow()const;
 };
 
 #endif // !BOX_HPP

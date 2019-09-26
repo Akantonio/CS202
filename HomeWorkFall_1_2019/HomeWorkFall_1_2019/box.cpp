@@ -57,12 +57,12 @@ void Box::print(std::ostream & s) const
 	}
 }
 
-string Box::filled()
+string Box::filled() const
 {
 	return "";
 }
 
-string Box::hollow()
+string Box::hollow() const
 {
 	return "";
 }
