@@ -24,12 +24,12 @@ int Box::getHeight() const
 
 void Box::setWidth(int x)
 {
-
+	_width = x;
 }
 
 void Box::setHeight(int x)
 {
-
+	_height = x;
 }
 
 string Box::type(bool _type)
