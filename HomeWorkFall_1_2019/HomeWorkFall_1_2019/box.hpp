@@ -20,9 +20,7 @@ private:
 	int _width;
 	int _height;
 	bool _type;
-	string filled()const;
-	string hollow()const;
-	string printBoxOutLine(int x,bool logic);
+	string printBoxOutLine(int x,int y,bool logic)const;
 };
 
 #endif // !BOX_HPP

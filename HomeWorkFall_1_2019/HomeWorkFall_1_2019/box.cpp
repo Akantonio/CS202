@@ -57,17 +57,8 @@ void Box::print(std::ostream & s) const
 	}
 }
 
-string Box::filled() const 
-{
-	return "";
-}
 
-string Box::hollow() const
-{
-	return "";
-}
-
-string Box::printBoxOutLine(int x,bool logic)
+string Box::printBoxOutLine(int x,int y,bool logic) const
 { 
 	int temp = x;
 	string s;
@@ -82,7 +73,7 @@ string Box::printBoxOutLine(int x,bool logic)
 	}
 	else 
 	{
-	
+		
 	}
 
 	return s;
