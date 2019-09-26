@@ -8,7 +8,7 @@
 Box::Box():_width(1),_height(1),_type(true)
 {
 }
-Box::Box(int & x, int &y,bool &z):_width(x),_height(y),_type(z)
+Box::Box(int x, int y,bool z):_width(x),_height(y),_type(z)
 {
 }
 
@@ -32,7 +32,9 @@ void Box::setHeight(int x)
 	_height = x;
 }
 
-string Box::type(bool _type)
+
+
+string Box::type()
 {
 	if(_type){
 		return "Filled";
