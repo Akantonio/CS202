@@ -22,6 +22,7 @@ private:
 	bool _type;
 	string filled()const;
 	string hollow()const;
+	string printBoxOutLine(int x,bool logic);
 };
 
 #endif // !BOX_HPP

@@ -57,7 +57,7 @@ void Box::print(std::ostream & s) const
 	}
 }
 
-string Box::filled() const
+string Box::filled() const 
 {
 	return "";
 }
@@ -65,5 +65,16 @@ string Box::filled() const
 string Box::hollow() const
 {
 	return "";
+}
+
+string Box::printBoxOutLine(int x,bool logic)
+{
+	string s;
+	for (int i = 1; i <= x; ++i) {
+		s += "*";
+	}
+	s += "\n";
+
+	return s;
 }
 
