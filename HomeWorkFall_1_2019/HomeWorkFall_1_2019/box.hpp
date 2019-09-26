@@ -13,7 +13,7 @@ public:
 	int getHeight()const;
 	void setWidth(int x);
 	void setHeight(int x);
-	string type();
+	string type()const;
 private:
 	int _width;
 	int _height;

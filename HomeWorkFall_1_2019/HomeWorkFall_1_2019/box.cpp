@@ -34,7 +34,7 @@ void Box::setHeight(int x)
 
 
 
-string Box::type()
+string Box::type() const
 {
 	if(_type){
 		return "Filled";
