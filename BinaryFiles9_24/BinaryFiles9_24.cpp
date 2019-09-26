@@ -13,6 +13,7 @@ int main()
 	ifstream ifile;
 	ifile.open("data.dat",std::ios::in|std::ios::binary);
 	double total=0;
+	int totalNum = 0;
 	vector<int> v(20000);
 	while (true)
 	{
@@ -26,12 +27,14 @@ int main()
 		//ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
 		cout << v[0] << " ";
 		total += v[0];
+		
 	}
-
-
+	cout << total << " ";
+	cout << v.size();
+	cout << " " << (total / totalNum);
 	
 
-    cout << "Hello World!\n";
+    cout << " Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
