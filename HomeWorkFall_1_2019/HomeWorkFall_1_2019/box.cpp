@@ -66,7 +66,7 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 				s += "X";
 			}
 		}
-		else if(!logic)//the middle of the box if hollow
+		else if(!(temp<=1)||!logic)//the middle of the box if hollow
 		{
 			s += "X";
 			for (int i = 1; i <= (x - 2); ++i) 
