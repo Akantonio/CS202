@@ -14,7 +14,7 @@ int main()
 	ifile.open("data.dat",std::ios::in|std::ios::binary);
 	double total=0;
 	int totalNum = 0;
-	int read;
+	int read=0;
 	while (true)
 	{
 
