@@ -1,6 +1,7 @@
 #ifndef BOX_HPP
 #define BOX_HPP
-
+//Adrian Antonio
+//HomeWork 1 for CS202 Fall 2019 
 
 #include <string>
 #include <sstream>
