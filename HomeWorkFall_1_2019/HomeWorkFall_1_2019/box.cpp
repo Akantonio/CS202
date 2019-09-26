@@ -47,7 +47,7 @@ string Box::type() const //checks if it's true and false to send out either "Fil
 	}
 }
 
-void Box::print(std::ostream & s) const
+void Box::print(std::ostream & s) 
 {
 	s << printBoxOutLine(_width,_height,_type);
 }
@@ -60,12 +60,13 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	do
 	{
 		for (int i = 1; i <= x; ++i) {
-			s += "*";
+			s += "X";
 		}
 		s += "\n"; //Prints first line
-	} while (temp!=1);
+		--temp;
+	} while (temp>=1);
 
-	std::cout << s << std::endl;//take this out it's a test
+	
 
 	return s;
 }

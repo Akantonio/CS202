@@ -15,7 +15,7 @@ public:
 	void setWidth(int x);
 	void setHeight(int x);
 	string type()const;
-	void print(std::ostream & s)const;
+	void print(std::ostream & s);
 private:
 	int _width;
 	int _height;
