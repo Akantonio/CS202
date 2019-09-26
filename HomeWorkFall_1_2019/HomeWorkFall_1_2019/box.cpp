@@ -57,7 +57,7 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 { 
 	int temp = x;
 	string s;
-	for (int i = 1; i <= x; ++i) {
+	for (int i = 1; i <= x; ++i) { //Prints first line
 		s += "*";
 	}
 	s += "\n";
