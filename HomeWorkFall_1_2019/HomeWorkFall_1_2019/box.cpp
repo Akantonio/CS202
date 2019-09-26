@@ -5,7 +5,7 @@
 #include "box.hpp"
 
 
-Box::Box():_width(1),_height(1)
+Box::Box():_width(1),_height(1),_type(true)
 {
 }
 Box::Box(int & x, int &y):_width(x),_height(y)
@@ -32,10 +32,14 @@ void Box::setHeight(int x)
 
 }
 
-string Box::type()
+string Box::type(bool _type)
 {
-
-	return ;
+	if(_type){
+		return "Filled";
+	}
+	else {
+		return "Hollow";
+	}
 }
 
 

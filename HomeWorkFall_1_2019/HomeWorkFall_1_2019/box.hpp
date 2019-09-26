@@ -13,11 +13,11 @@ public:
 	int getHeight()const;
 	void setWidth(int x);
 	void setHeight(int x);
-	string type();
+	string type(bool _type);
 private:
 	int _width;
 	int _height;
-
+	bool _type;
 };
 
 #endif // !BOX_HPP
