@@ -47,8 +47,8 @@ string Box::type() const
 	}
 }
 
-void print()
+void Box::print(std::ostream & s) const
 {
-
+	s << "hello";
 }
 
