@@ -77,7 +77,6 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 		}
 		s += "\n"; 
 		--temp;
-		std::cout << s << std::endl;//DELETE IF THE TEST Succeeds this is a check to see what it prints out
 	} while (temp>=1);
 
 	return s;
