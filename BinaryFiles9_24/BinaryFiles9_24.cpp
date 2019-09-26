@@ -14,23 +14,23 @@ int main()
 	ifile.open("data.dat",std::ios::in|std::ios::binary);
 	double total=0;
 	int totalNum = 0;
-	vector<int> v(20000);
+	int read;
 	while (true)
 	{
 
-		ifile.read(reinterpret_cast<char*>(&v[0]), sizeof(int));
+		ifile.read(reinterpret_cast<char*>(&read), sizeof(int));
 		if (!ifile) {
 			if (ifile.eof()) {
 				break;
 			}
 		}
 		//ifile.read(reinterpret_cast<char*>(&x), sizeof(x));
-		cout << v[0] << " ";
-		total += v[0];
-		
+		//cout << v[0] << " ";
+		total += read;
+		totalNum++;
 	}
 	cout << total << " ";
-	cout << v.size();
+	cout <<totalNum;
 	cout << " " << (total / totalNum);
 	
 

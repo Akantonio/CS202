@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include"names.hpp"
 
 void foo()
 {
@@ -11,6 +12,8 @@ void foo()
 
 int main()
 {
+	foo();
+	twin::foo();
     std::cout << "Hello World!\n";
 }
 
