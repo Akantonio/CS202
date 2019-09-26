@@ -75,6 +75,8 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	}
 	s += "*\n";
 	
+	std::cout << s << std::endl;//take this out it's a test
+
 	return s;
 }
 
