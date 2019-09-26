@@ -59,14 +59,14 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	string s;
 	do
 	{
-		if (temp == y) 
+		if (temp == y||logic) //beggining and the middle for filled box
 		{
 			for (int i = 1; i <= x; ++i) 
 			{
 				s += "X";
 			}
 		}
-		else if(logic)
+		else if(!logic)//the middle of the box if hollow
 		{
 			s += "X";
 			for (int i = 1; i <= (x - 2); ++i) 
@@ -75,12 +75,10 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 			}
 			s += "X";
 		}
-		s += "\n"; //Prints first line
+		s += "\n"; 
 		--temp;
 		std::cout << s << std::endl;
 	} while (temp>=1);
-
-	
 
 	return s;
 }
