@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+void foo()
+{
+	std::cout << "this is the main file\n";
+}
+
+
 int main()
 {
     std::cout << "Hello World!\n";

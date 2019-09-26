@@ -18,5 +18,13 @@
     <ClCompile Include="Lab6Namespaces_9_26.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="names.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="names.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
