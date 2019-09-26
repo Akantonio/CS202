@@ -3,6 +3,7 @@
 
 
 #include <string>
+#include <sstream>
 using std::string;
 
 class Box {
