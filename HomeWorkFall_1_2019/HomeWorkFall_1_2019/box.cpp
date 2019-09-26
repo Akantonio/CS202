@@ -68,12 +68,22 @@ string Box::hollow() const
 }
 
 string Box::printBoxOutLine(int x,bool logic)
-{
+{ 
+	int temp = x;
 	string s;
 	for (int i = 1; i <= x; ++i) {
 		s += "*";
 	}
 	s += "\n";
+	if (!logic)
+	{
+		s += "*";
+
+	}
+	else 
+	{
+	
+	}
 
 	return s;
 }
