@@ -63,17 +63,17 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 		{
 			for (int i = 1; i <= x; ++i) 
 			{
-				s += "X";
+				s += "x";
 			}
 		}
 		else if(!(temp<=1)||!logic)//the middle of the box if hollow
 		{
-			s += "X";
+			s += "x";
 			for (int i = 1; i <= (x - 2); ++i) 
 			{
 				s += " ";
 			}
-			s += "X";
+			s += "x";
 		}
 		s += "\n"; 
 		--temp;
