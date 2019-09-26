@@ -72,14 +72,15 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	}
 	else 
 	{
-		int counter;
+		int count=0;
 		do
 		{
 			for (int i = 1; i <= x; ++i) {
-
+				s += "*";
 			}
 			s += "\n";
-		} while (counter<y);
+			++count;
+		} while (count<y);
 	}
 
 	return s;
