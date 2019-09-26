@@ -6,14 +6,13 @@
  */
 
 // Includes for code to be tested
-#include "hw1.h"
-#include "hw1.h"   // Double inclusion test
+#include "files.hpp"
+#include "files.hpp"   // Double inclusion test
 
 // Includes for testing package & code common to all test programs
 #include <iostream>     // for std::cout, std::endl, std::cin
 #include <string>       // for std::string
 #include <stdexcept>    // for std::runtime_error
-
 // Additional includes for this test program
 #include <sstream>      // for std::ostringstream
 
