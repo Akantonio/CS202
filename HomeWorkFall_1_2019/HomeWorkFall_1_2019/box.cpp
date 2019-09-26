@@ -49,12 +49,7 @@ string Box::type() const //checks if it's true and false to send out either "Fil
 
 void Box::print(std::ostream & s) const
 {
-	if (_type) 
-	{
-		s<< filled();
-	}else{
-
-	}
+	s << printBoxOutLine(_width,_height,_type);
 }
 
 
@@ -69,11 +64,22 @@ string Box::printBoxOutLine(int x,int y,bool logic) const
 	if (!logic)
 	{
 		s += "*";
-
+		for (int i = 1; i <= (x - 2); ++i)
+		{
+			s += " ";
+		}
+		s += "*";
 	}
 	else 
 	{
-		
+		int counter;
+		do
+		{
+			for (int i = 1; i <= x; ++i) {
+
+			}
+			s += "\n";
+		} while (counter<y);
 	}
 
 	return s;
