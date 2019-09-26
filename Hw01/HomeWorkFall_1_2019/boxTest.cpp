@@ -488,7 +488,7 @@ void test_class_Box_default_ctor(Tester& t)
 	t.test(i1 == 1, "Default ctor, height");
 
 	// Check default constructed type
-	s1 = con1.type();
+	s1 = con1.type(); 
 	t.test(s1 == "Filled", "Default ctor, type");
 }
 
