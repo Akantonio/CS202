@@ -55,33 +55,7 @@ void Box::print(std::ostream & s) const
 
 string Box::printBoxOutLine(int x,int y,bool logic) const
 { 
-	int temp = x;
 	string s;
-	for (int i = 1; i <= x; ++i) {
-		s += "*";
-	}
-	s += "\n";
-	if (!logic)
-	{
-		s += "*";
-		for (int i = 1; i <= (x - 2); ++i)
-		{
-			s += " ";
-		}
-		s += "*";
-	}
-	else 
-	{
-		int count=0;
-		do
-		{
-			for (int i = 1; i <= x; ++i) {
-				s += "*";
-			}
-			s += "\n";
-			++count;
-		} while (count<y);
-	}
 
 	return s;
 }
