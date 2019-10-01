@@ -2,14 +2,12 @@
 #define BUILDING_HPP
 
 #include<iostream>
-using std::cout;
-using std::cin;
 #include <string>
 using std::string;
 
 class Building
 {
-	
+	friend std::ostream& operator<<(std::ostream& os, const Building& b);
 public:
 	Building();
 	Building(const string & s,const int & x);

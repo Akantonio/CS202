@@ -4,22 +4,22 @@
 
 Building::Building():_nameOfBuilding("None"),_numOfFloor(1)
 {
-	cout << "made a none build";
+	std::cout << "made a none build";
 }
 
 Building::Building(const string & s,const int & x):_nameOfBuilding(s),_numOfFloor(x)
 {
-	cout << "made a build";
+	std::cout << "made a build";
 }
 
 Building::Building(const Building& original):_nameOfBuilding(original.getName()),_numOfFloor(original.getFloorNum())
 {
-	cout << "copied stuff here\n";
+	std::cout << "copied stuff here\n";
 }
 
 Building::~Building()
 {
-	cout << " destroyed a building \n";
+	std::cout << " destroyed a building \n";
 }
 
 void Building::setName(string s) {
@@ -38,4 +38,9 @@ string Building::getName() const {
 
 int Building::getFloorNum() const{
 	return _numOfFloor;
+}
+
+std::ostream& operator<<(std::ostream& os, const Building& b)
+{
+	return os << "The building name: " << b._nameOfBuilding << "The number of floors: " << b._numOfFloor;
 }
