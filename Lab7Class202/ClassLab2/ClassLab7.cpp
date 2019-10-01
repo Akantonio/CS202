@@ -1,5 +1,5 @@
 // ClassLab2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Class lab 7 continuation of class lab2 for overloading operators
 
 #include <iostream>
 using std::cout;
@@ -29,27 +29,27 @@ void changeNameReference(Building& b)
 	
 	Building refB(b);
 	changeNameValue(refB);
-	cout << refB.getName() << " Floor: " << refB.getFloorNum() << endl;
+	cout << refB << endl;
 	return refB;
 }
 int main()
 {
 	Building local("Local", 50);
 
-	cout << local.getName() << " Floor: " << local.getFloorNum() << endl;
+	cout << local << endl;
 
 	changeNameValue(local);
 
-	cout << local.getName() << " Floor: " << local.getFloorNum() << endl;
+	cout << local << endl;
 
 	changeNameReference(local);
 
-	cout << local.getName() << " Floor: " << local.getFloorNum() << endl;
+	cout << local << endl;
 
 	vector<Building> userData(5);
 
 	for (auto& i : userData) {
-		cout << i.getName()<< " " << i.getFloorNum()<< endl;
+		cout << i << endl;
 	}
 	
 
@@ -67,7 +67,7 @@ int main()
 	}
 	
 	for (auto& i : userData) {
-		cout << i.getName() << " " << i.getFloorNum() <<  endl ;
+		cout << i << endl;
 	}
 
 
@@ -76,7 +76,7 @@ int main()
 	userData.push_back(toCopy);
 
 	for (auto& i : userData) {
-		cout << i.getName() << " " << i.getFloorNum() << endl;
+		cout << i << endl;
 	}
 
     cout << "Got out of loop \n";

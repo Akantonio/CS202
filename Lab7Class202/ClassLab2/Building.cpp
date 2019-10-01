@@ -9,7 +9,7 @@ Building::Building():_nameOfBuilding("None"),_numOfFloor(1)
 
 Building::Building(const string & s,const int & x):_nameOfBuilding(s),_numOfFloor(x)
 {
-	std::cout << "made a build";
+	std::cout << "made a build\n";
 }
 
 Building::Building(const Building& original):_nameOfBuilding(original.getName()),_numOfFloor(original.getFloorNum())
@@ -42,5 +42,5 @@ int Building::getFloorNum() const{
 
 std::ostream& operator<<(std::ostream& os, const Building& b)
 {
-	return os << "The building name: " << b._nameOfBuilding << "The number of floors: " << b._numOfFloor;
+	return os << "The building name: " << b._nameOfBuilding <<  " The number of floors: " << b._numOfFloor;
 }
