@@ -9,6 +9,7 @@ using std::string;
 
 class Building
 {
+	
 public:
 	Building();
 	Building(const string & s,const int & x);
