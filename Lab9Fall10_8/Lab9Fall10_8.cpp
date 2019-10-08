@@ -18,7 +18,8 @@ int main()
 {
 	usesOfStatic();
 	usesOfStatic();
-
+	cout << globalS::getNum() << endl;
+	cout << globalS::getNum() << endl;
     std::cout << "Hello World!\n";
 }
 
