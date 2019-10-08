@@ -3,6 +3,7 @@
 
 #include<string>
 #include<iostream>
+#include<fstream>
 
 int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os);
 
