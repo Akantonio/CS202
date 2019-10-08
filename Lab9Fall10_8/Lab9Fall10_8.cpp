@@ -1,10 +1,24 @@
 // Lab9Fall10_8.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Adrian Antonio Uses of static for code fall 10/8/2019
 
 #include <iostream>
+using std::cout;
+using std::endl;
+
+#include"staticCode.hpp"
+
+void usesOfStatic() 
+{
+	static int x = 0;
+	cout << x << endl;
+	++x;
+}
 
 int main()
 {
+	usesOfStatic();
+	usesOfStatic();
+
     std::cout << "Hello World!\n";
 }
 

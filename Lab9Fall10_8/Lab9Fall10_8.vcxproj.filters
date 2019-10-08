@@ -18,5 +18,13 @@
     <ClCompile Include="Lab9Fall10_8.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="staticCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="staticCode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

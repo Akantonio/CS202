@@ -1,0 +1,5 @@
+#ifndef STATICCODE_HPP
+#define STATICCODE_HPP
+
+
+#endif // !STATICCODE_HPP
