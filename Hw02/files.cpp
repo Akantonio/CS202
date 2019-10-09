@@ -74,8 +74,8 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 
 void numberChase(const std::string& s, std::ostream& os)
 {
-	int move=0;
-	int replace;
-	std::ifstream inputFile(s,std::ifstream::binary);
-	inputFile.seekg(move,sizeof(int));
+	//int move=0;
+	//int replace;
+	//std::ifstream inputFile(s,std::ifstream::binary);
+	//inputFile.seekg(move,sizeof(int));
 }
