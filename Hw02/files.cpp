@@ -59,11 +59,17 @@ void numberChase(const std::string& s, std::ostream& os)
 	inputFile.open(s, std::ios::in | std::ios::binary);
 	while(true)
 	{
-
-		inputFile.seekg(sizeof(int) * move);
+		
 		inputFile.read(reinterpret_cast<char*>(&read), sizeof(int));
+		std::cout << "this is move :{" << move << "}\n";//DELETE THIS
+
 		move = read;
-		if(read<0)
+		
+		//std::cout << "this is move :[" << move<<"]\n";//DELETE THIS
+		inputFile.seekg(sizeof(int) * move);
+
+		os << move;
+		if (read < 0)
 		{
 			break;
 		}
