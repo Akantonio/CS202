@@ -30,10 +30,13 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 				os << userID;
 				return 0;
 
-			}else if(is.eof())
+			}else if(!is)
 			{
-				std::cout << "error";
-				return 0;
+				if (is.eof())
+				{
+					std::cout << "error";
+					break;
+				}
 			}
 		} while (userName != userInput);
 
@@ -71,5 +74,8 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 
 void numberChase(const std::string& s, std::ostream& os)
 {
-
+	int move=0;
+	int replace;
+	std::ifstream inputFile(s,std::ifstream::binary);
+	inputFile.seekg(move,sizeof(int));
 }
