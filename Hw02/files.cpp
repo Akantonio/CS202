@@ -12,7 +12,7 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	std::ifstream ifile(s);
 	std::string line;
 	std::string lineInput;
-	std::string userInput;
+	
 	std::string userName;
 	int userID;
 	if (!ifile) {
@@ -20,26 +20,28 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	}
 	while (true)
 	{
-
+		std::string userInput;
 		if (!is) {
 			if (is.eof())
 			{
 				break;
 			}
 		}
-		is >> userInput;
-		
-		std::cout <<"{"<< userInput<<"}\n";//test delete
+		else
+		{
+			std::getline(is, userInput);
+		}
+		std::cout << "{" << userInput << "}\n";//test delete
 	}
-	
+	//std::cout << "2{" << userInput << "}2\n";//test delete
 	return 0;
 }
 
 
 void numberChase(const std::string& s, std::ostream& os)
 {
-	//int move=0;
-	//int replace;
-	//std::ifstream inputFile(s,std::ifstream::binary);
-	//inputFile.seekg(move,sizeof(int));
+	int move=0;
+	int replace;
+	std::ifstream inputFile(s,std::ifstream::binary);
+
 }
