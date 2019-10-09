@@ -6,6 +6,7 @@
 #include<string>
 #include<iostream>
 #include<fstream>
+#include<sstream>
 #include<vector>
 
 int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os);
