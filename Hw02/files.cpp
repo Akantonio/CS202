@@ -7,7 +7,7 @@
 
 #include "files.hpp"
 
-int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os)
+int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 {
 	std::ifstream ifile(s);
 	std::string line;
@@ -18,12 +18,28 @@ int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os)
 	if (!ifile) {
 		return -1;
 	}
+	while (is)
+	{
+
+		std::getline(is, userInput);
+		std::cout << userInput;
+		if (!ifile)
+		{
+			if (is.eof())
+			{
+				break;
+			}
+		}
+	}
+
 	while (ifile) 
 	{
 
 		std::getline(ifile, line);
+		
 		ifile >> userName >> userID;
-		si >> userInput;
+		std::cout <<" !1"<< userName<<" "<< userID<<std::endl;//test
+
 		if (userName == userInput) {
 			return userID;
 		}
