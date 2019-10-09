@@ -9,12 +9,16 @@
 
 int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os)
 {
+	std::ifstream ifile(s);
+	std::vector<std::string, int> list;
+	while (!ifile) 
+	{
+
+	}
+	
 	return 0;
 }
 
-void numberChase(const std::string, std::ostream& s)
-{
-}
 
 void numberChase(const std::string& s, std::ostream& os)
 {
