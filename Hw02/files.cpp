@@ -21,7 +21,7 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	while (true)
 	{
 		is >> userInput;
-		cout
+		std::cout << userInput << "\n";
 		if (!is) {
 			if(is.eof())
 			{
