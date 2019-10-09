@@ -14,6 +14,7 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	std::string lineInput;
 	std::string userInput;
 	std::string userName;
+	std::vector<std::string, int> fileNameAndID(100000);
 	int userID;
 	if (!ifile) {
 		return -1;
