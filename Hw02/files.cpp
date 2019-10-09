@@ -29,7 +29,7 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 			if(userName==userInput)
 			{
 				
-				os << userID;
+				os << userID << std::endl;
 			}
 			
 			if (!ifile)
