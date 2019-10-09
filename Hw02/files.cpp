@@ -9,12 +9,16 @@
 
 int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os)
 {
-	std::ifstream ifile(s);
-	std::vector<std::string, int> list;
-	while (!ifile) 
-	{
-
+	std::ifstream ifile;
+	ifile.open(s);
+	std::string userName;
+	int userID=0;
+	if (!ifile) {
+		return -1;
 	}
+
+
+	
 	
 	return 0;
 }
