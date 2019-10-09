@@ -13,5 +13,7 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os);
 
 void numberChase(const std::string & s, std::ostream & os);
 
+const int readingFromFile();
+
 #endif // !FILES_HPP
 

@@ -10,11 +10,8 @@
 int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 {
 	std::ifstream ifile(s);
-	std::string linefile;
 	std::string lineInput;
 	getline(is,lineInput);
-	std::string userName;
-	int userID=0;
 	if (!ifile) {
 		return -1;
 	}
@@ -22,30 +19,15 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	{
 		std::string userInput;
 		is >> userInput;
-		
-		while (true) 
-		{
-			ifile >> userName >> userID;
-			if(userName==userInput)
-			{
-				
-				os << userID << std::endl;
-			}
-			
-			if (!ifile)
-			{
-				if (ifile.eof())
-				{
-					break;
-				}
-			}
-		}
+		std::cout << "{" << userInput << "}\n";//test
 		if (!is) {
 			if (is.eof())
 			{
+				std::cout << "{" << "IS.EOF AT BREAK" << "}\n";//test
 				break;
 			}
 		}
+		std::cout << "[" << "OUTSIDE" << "]\n";//test
 	}
 	return 0;
 }
@@ -76,3 +58,32 @@ void numberChase(const std::string& s, std::ostream& os)
 		}
 	}
 }
+
+const int readingFromFile(const std::string& fs,std::string s)
+{	
+	std::string userName;
+	int userID;
+	std::ifstream checkFile(fs);
+	while (true)
+	{
+		checkFile >> userName >> userID;
+		if (userName == s)
+		{
+			std::cout << "{" << userID << "}\n";
+			std::cout << "{" << "BEFORE ADDING TO OS" << "}\n";
+			return userID;
+		}
+
+		if (!checkFile)
+		{
+			if (checkFile.eof())
+			{
+				std::cout << "{" << "IFILE.EOF AT BREAK" << "}\n";
+				break;
+			}
+		}
+	}
+	return 0;
+}
+
+
