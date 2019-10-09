@@ -12,7 +12,6 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	std::ifstream ifile(s);
 	std::string line;
 	std::string lineInput;
-	
 	std::string userName;
 	int userID;
 	if (!ifile) {
@@ -27,13 +26,26 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 				break;
 			}
 		}
-		else
+		std::getline(is, userInput);
+		std::cout << "{1" << userInput << "1}\n";//test delete
+		while (true) 
 		{
-			std::getline(is, userInput);
+			ifile >> userName >> userID;
+			if (!ifile) 
+			{
+				if(ifile.eof())
+				{
+					break;
+				}
+			}
+			if(userName==userInput)
+			{
+				std::cout << "{" << userID << "}\n";//test delete
+				os << userID;
+				break;
+			}
 		}
-		std::cout << "{" << userInput << "}\n";//test delete
 	}
-	//std::cout << "2{" << userInput << "}2\n";//test delete
 	return 0;
 }
 
