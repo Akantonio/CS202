@@ -68,7 +68,7 @@ void numberChase(const std::string& s, std::ostream& os)
 		
 		inputFile.seekg(sizeof(int) * move);
 
-		os << move;
+		os << move<<std::endl;
 
 		if (read < 0)
 		{
