@@ -20,33 +20,32 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	while (true)
 	{
 		std::string userInput;
-		if (!(is>>userInput)) {
-			std::cout << "your here\n";//test delete
-			if (is.eof())
-			{
-				break;
-			}
-		}
-		//is >> userInput;
+		is >> userInput;
 		std::cout << "{1" << userInput << "1}\n";//test delete
 		while (true) 
 		{
-			ifile >> userName >> userID;
-			if (!ifile) 
-			{
-				if(ifile.eof())
-				{
-					break;
-				}
-			}
+
 			if(userName==userInput)
 			{
 				std::cout << "{[" << userID << "]}\n";//test delete
 				os << userID;
 			}
+			ifile >> userName >> userID;
+			if (!ifile)
+			{
+				if (ifile.eof())
+				{
+					break;
+				}
+			}
+		}
+		if (!is) {
+			if (is.eof())
+			{
+				break;
+			}
 		}
 	}
-	std::cout << "outside\n";
 	return 0;
 }
 
