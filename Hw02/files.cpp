@@ -20,17 +20,21 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	{
 		std::string userInput;
 		is >> userInput;
-		std::cout << "{" << userInput << "}\n";//test
+		
 		sendingUserId=readingFromFile(s,userInput);
-		os << sendingUserId << "\n";
+		if (sendingUserId == -1) {
+			os << "error\n";
+		}else{
+			os << sendingUserId << "\n";
+		}
 		if (!is) {
 			if (is.eof())
 			{
-				std::cout << "{" << "IS.EOF AT BREAK" << "}\n";//test
+				
 				break;
 			}
 		}
-		std::cout << "[" << "OUTSIDE" << "]\n";//test
+		
 	}
 	return 0;
 }
@@ -72,8 +76,7 @@ const int readingFromFile(const std::string& fs,std::string s)
 		checkFile >> userName >> userID;
 		if (userName == s)
 		{
-			std::cout << "{" << userID << "}\n";
-			std::cout << "{" << "BEFORE ADDING TO OS" << "}\n";//test
+					
 			return userID;
 		}
 
@@ -81,12 +84,11 @@ const int readingFromFile(const std::string& fs,std::string s)
 		{
 			if (checkFile.eof())
 			{
-				std::cout << "{" << "IFILE.EOF AT BREAK" << "}\n";//test
-				break;
+				return -1;
 			}
 		}
 	}
-	return 0;
+	return -1;
 }
 
 
