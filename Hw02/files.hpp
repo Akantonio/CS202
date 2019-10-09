@@ -7,6 +7,6 @@
 
 int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os);
 
-void numberChase(const std::string, std::ostream& s);
+void numberChase(const std::string & s, std::ostream & os);
 #endif // !FILES_HPP
 

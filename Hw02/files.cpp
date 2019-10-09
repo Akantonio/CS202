@@ -12,6 +12,10 @@ int getIdFromFile(const std::string& s, std::istream& si, std::ostream& os)
 	return 0;
 }
 
+void numberChase(const std::string, std::ostream& s)
+{
+}
+
 void numberChase(const std::string& s, std::ostream& os)
 {
 
