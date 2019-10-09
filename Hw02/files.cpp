@@ -20,48 +20,10 @@ int getIdFromFile(const std::string& s, std::istream& is, std::ostream& os)
 	}
 	while (true)
 	{
-		std::getline(is, userInput);
-		std::cout << userInput << "\n";//test
-		do 
-		{
-			ifile >> userName >> userID;
-			if (userInput == userName)
-			{
-				os << userID;
-				return 0;
-
-			}else if(!is)
-			{
-				if (is.eof())
-				{
-					std::cout << "error";
-					break;
-				}
-			}
-		} while (userName != userInput);
-
-		//while (ifile)
-		//{
-
-		//	std::getline(ifile, line);
-		//	ifile >> userName >> userID;
-		//	//std::cout << " !1" << userName << " " << userID << std::endl;//test
-
-		//	if (userName == userInput) {
-		//		os << userID;
-		//		return 0;
-		//	}
-		//	if (!ifile)
-		//	{
-		//		if (ifile.eof())
-		//		{
-		//			break;
-		//		}
-		//	}
-		//}
-		if (!is)
-		{
-			if (is.eof())
+		is >> userInput;
+		cout
+		if (!is) {
+			if(is.eof())
 			{
 				break;
 			}
