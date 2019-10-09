@@ -61,14 +61,15 @@ void numberChase(const std::string& s, std::ostream& os)
 	{
 		
 		inputFile.read(reinterpret_cast<char*>(&read), sizeof(int));
-		std::cout << "this is move :{" << move << "}\n";//DELETE THIS
+		
 
 		move = read;
 		
-		//std::cout << "this is move :[" << move<<"]\n";//DELETE THIS
+		
 		inputFile.seekg(sizeof(int) * move);
 
 		os << move;
+
 		if (read < 0)
 		{
 			break;
