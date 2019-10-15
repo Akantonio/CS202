@@ -6,10 +6,10 @@
 
 
 
-Box::Box():_width(1),_height(1),_type(FILLED)
+Box::Box():_width(1),_height(1),_type(Box::BoxType::FILLED)
 {
 }
-Box::Box(int x, int y) : _width(x), _height(y),_type(FILLED)
+Box::Box(int x, int y) : _width(x), _height(y),_type(Box::BoxType::FILLED)
 {
 }
 Box::Box(int x, int y,BoxType z):_width(x),_height(y),_type(z)
@@ -42,9 +42,9 @@ string Box::type() const //Returns the type
 {
 	switch (_type) //CHANGE HERE FOR ANOTHER TYPE
 	{
-	case(HOLLOW):
+	case(Box::BoxType::HOLLOW):
 		return "HOLLOW";
-	case(CHECKERED):
+	case(Box::BoxType::CHECKERED):
 		return "CHECKERED";
 	default:
 		return "FILLED";

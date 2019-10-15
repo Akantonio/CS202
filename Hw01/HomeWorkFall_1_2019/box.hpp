@@ -9,12 +9,12 @@ using std::string;
 
 class Box {
 public:
-	enum BoxType {FILLED,HOLLOW,CHECKERED};//Change here to add another type
+	enum class BoxType { FILLED, HOLLOW, CHECKERED };//Change here to add another type
 	Box();
 	Box(int x, int y);
 	Box(int x, int y,BoxType z);
 	int getWidth() const;
-	int getHeight()const;
+	int getHeight()const; 
 	void setWidth(int x);
 	void setHeight(int x);
 	string type()const;
