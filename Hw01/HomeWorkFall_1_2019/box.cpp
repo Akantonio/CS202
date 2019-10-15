@@ -57,20 +57,24 @@ void Box::print(std::ostream & s) const
 }
 
 
-string Box::printBoxOutLine(int x,int y,bool logic) const
+string Box::printBoxOutLine(int x,int y,Box::BoxType type) const//CHANGE HERE FOR ANOTHER BOX TYPE
 { 
 	int temp = y;
 	string s;
 	do
 	{
-		if ((temp == y||logic)||temp==1) //if temp is the same as y or its a filled  box 
+		if (Box::BoxType::CHECKERED==type) //CHECKERED
+		{
+
+		}
+		if ((temp == y||(type==Box::BoxType::FILLED)||temp==1)) //FILLED 
 		{
 			for (int i = 1; i <= x; ++i) 
 			{
 				s += "x";
 			}
 		}
-		else if(!(temp<=1)||!logic)//the middle of the box if hollow
+		else if(!(temp<=1)||(Box::BoxType::HOLLOW==type))//HOLLOW
 		{
 			s += "x";
 			for (int i = 1; i <= (x - 2); ++i) 

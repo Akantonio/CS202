@@ -23,7 +23,7 @@ private:
 	int _width;
 	int _height;
 	BoxType _type;
-	string printBoxOutLine(int x,int y,bool logic)const;
+	string printBoxOutLine(int x,int y,Box::BoxType type)const;
 };
 
 #endif // !BOX_HPP
