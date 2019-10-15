@@ -9,10 +9,12 @@ using std::string;
 
 
 
+
 	class Box {
 
 	public:
 		enum BoxType{ FILLED, HOLLOW, CHECKERED };//Change here to add another type
+		static void howMany();
 		Box();
 		Box(int x, int y);
 		Box(int x, int y,  BoxType z);

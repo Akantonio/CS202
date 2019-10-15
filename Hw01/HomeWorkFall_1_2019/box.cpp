@@ -8,10 +8,15 @@
 
 
 
-	Box::Box() :_width(1), _height(1), _type(Box::Box::BoxType::FILLED)
+void Box::howMany()
+{
+
+}
+
+Box::Box() :_width(1), _height(1), _type(FILLED)
 	{
 	}
-	Box::Box(int x, int y) : _width(x), _height(y), _type(Box::Box::BoxType::FILLED)
+	Box::Box(int x, int y) : _width(x), _height(y), _type(FILLED)
 	{
 	}
 	Box::Box(int x, int y, BoxType z) : _width(x), _height(y), _type(z)
@@ -44,9 +49,9 @@
 	{
 		switch (_type) //CHANGE HERE FOR ANOTHER TYPE
 		{
-		case(Box::BoxType::HOLLOW):
+		case(HOLLOW):
 			return "HOLLOW";
-		case(Box::BoxType::CHECKERED):
+		case(CHECKERED):
 			return "CHECKERED";
 		default:
 			return "FILLED";
@@ -63,7 +68,7 @@
 	{
 		int temp = y;
 		string s;
-		if (Box::BoxType::CHECKERED == type) //CHECKERED
+		if (CHECKERED == type) //CHECKERED
 		{
 			while (temp > 1)
 			{
@@ -96,14 +101,14 @@
 		}
 		do
 		{
-			if ((temp == y || (type == Box::BoxType::FILLED) || temp == 1)) //FILLED 
+			if ((temp == y || (type == FILLED) || temp == 1)) //FILLED 
 			{
 				for (int i = 1; i <= x; ++i)
 				{
 					s += "x";
 				}
 			}
-			else if (!(temp <= 1) || (Box::BoxType::HOLLOW == type))//HOLLOW
+			else if (!(temp <= 1) || (HOLLOW == type))//HOLLOW
 			{
 				s += "x";
 				for (int i = 1; i <= (x - 2); ++i)
