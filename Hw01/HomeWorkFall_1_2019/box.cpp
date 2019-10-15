@@ -4,116 +4,117 @@
 #include<iostream>
 #include "box.hpp"
 
+namespace Box {
 
-
-Box::Box():_width(1),_height(1),_type(Box::BoxType::FILLED)
-{
-}
-Box::Box(int x, int y) : _width(x), _height(y),_type(Box::BoxType::FILLED)
-{
-}
-Box::Box(int x, int y,BoxType z):_width(x),_height(y),_type(z)
-{
-}
-
-int Box::getWidth() const
-{
-	return _width;
-}
-
-int Box::getHeight() const
-{
-	return _height;
-}
-
-void Box::setWidth(int x)
-{
-	_width = x;
-}
-
-void Box::setHeight(int x)
-{
-	_height = x;
-}
-
-
-
-string Box::type() const //Returns the type
-{
-	switch (_type) //CHANGE HERE FOR ANOTHER TYPE
+	Box::Box() :_width(1), _height(1), _type(Box::BoxType::FILLED)
 	{
-	case(Box::BoxType::HOLLOW):
-		return "HOLLOW";
-	case(Box::BoxType::CHECKERED):
-		return "CHECKERED";
-	default:
-		return "FILLED";
 	}
-}
-
-void Box::print(std::ostream & s) const
-{
-	s << printBoxOutLine(_width,_height,_type);
-}
-
-
-string Box::printBoxOutLine(int x,int y,Box::BoxType type) const//CHANGE HERE FOR ANOTHER BOX TYPE
-{ 
-	int temp = y;
-	string s;
-	if (Box::BoxType::CHECKERED == type) //CHECKERED
+	Box::Box(int x, int y) : _width(x), _height(y), _type(Box::BoxType::FILLED)
 	{
-		while (temp>1)
+	}
+	Box::Box(int x, int y, BoxType z) : _width(x), _height(y), _type(z)
+	{
+	}
+
+	int Box::getWidth() const
+	{
+		return _width;
+	}
+
+	int Box::getHeight() const
+	{
+		return _height;
+	}
+
+	void Box::setWidth(int x)
+	{
+		_width = x;
+	}
+
+	void Box::setHeight(int x)
+	{
+		_height = x;
+	}
+
+
+
+	string Box::type() const //Returns the type
+	{
+		switch (_type) //CHANGE HERE FOR ANOTHER TYPE
 		{
-			if (temp%2==1) {
-				for (int i = 1; i <= x; ++i)
-				{
-					if (i % 2 == 1) {
-						s += "x";
-					}
-					else {
-						s += " ";
-					}
-				}
-			}
-			else {
-				for (int i = 1; i <= x; ++i)
-				{
-					if (i % 2 == 1) {
-						s += " ";
-					}
-					else {
-						s += "x";
-					}
-				}
-			}
-			temp--;
+		case(Box::BoxType::HOLLOW):
+			return "HOLLOW";
+		case(Box::BoxType::CHECKERED):
+			return "CHECKERED";
+		default:
+			return "FILLED";
 		}
+	}
+
+	void Box::print(std::ostream& s) const
+	{
+		s << printBoxOutLine(_width, _height, _type);
+	}
+
+
+	string Box::printBoxOutLine(int x, int y, Box::BoxType type) const//CHANGE HERE FOR ANOTHER BOX TYPE
+	{
+		int temp = y;
+		string s;
+		if (Box::BoxType::CHECKERED == type) //CHECKERED
+		{
+			while (temp > 1)
+			{
+				if (temp % 2 == 1) {
+					for (int i = 1; i <= x; ++i)
+					{
+						if (i % 2 == 1) {
+							s += "x";
+						}
+						else {
+							s += " ";
+						}
+					}
+				}
+				else {
+					for (int i = 1; i <= x; ++i)
+					{
+						if (i % 2 == 1) {
+							s += " ";
+						}
+						else {
+							s += "x";
+						}
+					}
+				}
+				temp--;
+			}
+
+			return s;
+		}
+		do
+		{
+			if ((temp == y || (type == Box::BoxType::FILLED) || temp == 1)) //FILLED 
+			{
+				for (int i = 1; i <= x; ++i)
+				{
+					s += "x";
+				}
+			}
+			else if (!(temp <= 1) || (Box::BoxType::HOLLOW == type))//HOLLOW
+			{
+				s += "x";
+				for (int i = 1; i <= (x - 2); ++i)
+				{
+					s += " ";
+				}
+				s += "x";
+			}
+			s += "\n";
+			--temp;
+		} while (temp >= 1);
 
 		return s;
 	}
-	do
-	{
-		if ((temp == y||(type==Box::BoxType::FILLED)||temp==1)) //FILLED 
-		{
-			for (int i = 1; i <= x; ++i) 
-			{
-				s += "x";
-			}
-		}
-		else if(!(temp<=1)||(Box::BoxType::HOLLOW==type))//HOLLOW
-		{
-			s += "x";
-			for (int i = 1; i <= (x - 2); ++i) 
-			{
-				s += " ";
-			}
-			s += "x";
-		}
-		s += "\n"; 
-		--temp;
-	} while (temp>=1);
 
-	return s;
 }
-
