@@ -63,12 +63,33 @@ string Box::printBoxOutLine(int x,int y,Box::BoxType type) const//CHANGE HERE FO
 	string s;
 	if (Box::BoxType::CHECKERED == type) //CHECKERED
 	{
-		if ((x % 2) == 1) {
-
-		}else
+		while (temp>1)
 		{
-			
+			if (temp%2==1) {
+				for (int i = 1; i <= x; ++i)
+				{
+					if (i % 2 == 1) {
+						s += "x";
+					}
+					else {
+						s += " ";
+					}
+				}
+			}
+			else {
+				for (int i = 1; i <= x; ++i)
+				{
+					if (i % 2 == 1) {
+						s += " ";
+					}
+					else {
+						s += "x";
+					}
+				}
+			}
+			temp--;
 		}
+
 		return s;
 	}
 	do
