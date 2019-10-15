@@ -6,21 +6,29 @@
 
 
 
+int Box::_numOfBox = 0;
 
-
-void Box::howMany()
+int Box::howMany()
 {
-
+	return _numOfBox;
 }
 
 Box::Box() :_width(1), _height(1), _type(FILLED)
 	{
+	_numOfBox++;
 	}
 	Box::Box(int x, int y) : _width(x), _height(y), _type(FILLED)
 	{
+		_numOfBox++;
 	}
 	Box::Box(int x, int y, BoxType z) : _width(x), _height(y), _type(z)
 	{
+		_numOfBox++;
+	}
+
+	Box::~Box()
+	{
+		_numOfBox--;
 	}
 
 	int Box::getWidth() const

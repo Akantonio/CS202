@@ -14,10 +14,11 @@ using std::string;
 
 	public:
 		enum BoxType{ FILLED, HOLLOW, CHECKERED };//Change here to add another type
-		static void howMany();
+		static int howMany();
 		Box();
 		Box(int x, int y);
 		Box(int x, int y,  BoxType z);
+		~Box();
 		int getWidth() const;
 		int getHeight()const;
 		void setWidth(int x);
@@ -25,6 +26,7 @@ using std::string;
 		string type()const;
 		void print(std::ostream& s)const;
 	private:
+		static int _numOfBox;
 		int _width;
 		int _height;
 		BoxType _type;
