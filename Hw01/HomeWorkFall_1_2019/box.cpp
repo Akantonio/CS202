@@ -61,12 +61,18 @@ string Box::printBoxOutLine(int x,int y,Box::BoxType type) const//CHANGE HERE FO
 { 
 	int temp = y;
 	string s;
+	if (Box::BoxType::CHECKERED == type) //CHECKERED
+	{
+		if ((x % 2) == 1) {
+
+		}else
+		{
+			
+		}
+		return s;
+	}
 	do
 	{
-		if (Box::BoxType::CHECKERED==type) //CHECKERED
-		{
-
-		}
 		if ((temp == y||(type==Box::BoxType::FILLED)||temp==1)) //FILLED 
 		{
 			for (int i = 1; i <= x; ++i) 
