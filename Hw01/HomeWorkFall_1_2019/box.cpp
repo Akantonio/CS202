@@ -5,7 +5,7 @@
 #include "box.hpp"
 
 
-namespace Box {
+
 
 
 	Box::Box() :_width(1), _height(1), _type(Box::Box::BoxType::FILLED)
@@ -118,4 +118,3 @@ namespace Box {
 
 		return s;
 	}
-}

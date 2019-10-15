@@ -7,7 +7,7 @@
 #include <sstream>
 using std::string;
 
-namespace box {
+
 
 	class Box {
 
@@ -29,6 +29,6 @@ namespace box {
 		string printBoxOutLine(int x, int y, Box::Box::BoxType type)const;
 	};
 
-}
+
 #endif // !BOX_HPP
 
