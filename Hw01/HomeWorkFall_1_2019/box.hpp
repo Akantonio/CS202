@@ -7,8 +7,10 @@
 #include <sstream>
 using std::string;
 
-namespace Box {
+namespace box {
+
 	class Box {
+
 	public:
 		enum class BoxType { FILLED, HOLLOW, CHECKERED };//Change here to add another type
 		Box();
@@ -24,8 +26,9 @@ namespace Box {
 		int _width;
 		int _height;
 		BoxType _type;
-		string printBoxOutLine(int x, int y, Box::BoxType type)const;
+		string printBoxOutLine(int x, int y, Box::Box::BoxType type)const;
 	};
+
 }
 #endif // !BOX_HPP
 

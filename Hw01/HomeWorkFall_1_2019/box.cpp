@@ -4,12 +4,14 @@
 #include<iostream>
 #include "box.hpp"
 
+
 namespace Box {
 
-	Box::Box() :_width(1), _height(1), _type(Box::BoxType::FILLED)
+
+	Box::Box() :_width(1), _height(1), _type(Box::Box::BoxType::FILLED)
 	{
 	}
-	Box::Box(int x, int y) : _width(x), _height(y), _type(Box::BoxType::FILLED)
+	Box::Box(int x, int y) : _width(x), _height(y), _type(Box::Box::BoxType::FILLED)
 	{
 	}
 	Box::Box(int x, int y, BoxType z) : _width(x), _height(y), _type(z)
@@ -116,5 +118,4 @@ namespace Box {
 
 		return s;
 	}
-
 }
