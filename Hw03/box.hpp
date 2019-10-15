@@ -9,10 +9,9 @@ using std::string;
 
 class Box {
 public:
-	enum BoxType {FILLED,HOLLOW,CHECKERED};//Change here to add another type
 	Box();
 	Box(int x, int y);
-	Box(int x, int y,BoxType z);
+	Box(int x, int y,bool z);
 	int getWidth() const;
 	int getHeight()const;
 	void setWidth(int x);
@@ -22,7 +21,7 @@ public:
 private:
 	int _width;
 	int _height;
-	BoxType _type;
+	bool _type;
 	string printBoxOutLine(int x,int y,bool logic)const;
 };
 
