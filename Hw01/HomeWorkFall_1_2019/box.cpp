@@ -38,13 +38,16 @@ void Box::setHeight(int x)
 
 
 
-string Box::type() const //checks if it's true and false to send out either "Filled" or "Hollow"
+string Box::type() const //Returns the type
 {
-	if(_type){
-		return "Filled";
-	}
-	else {
-		return "Hollow";
+	switch (_type) //CHANGE HERE FOR ANOTHER TYPE
+	{
+	case(HOLLOW):
+		return "HOLLOW";
+	case(CHECKERED):
+		return "CHECKERED";
+	default:
+		return "FILLED";
 	}
 }
 
