@@ -13,11 +13,11 @@ int Box::howMany()
 	return _numOfBox;
 }
 
-Box::Box() :_width(1), _height(1), _type(FILLED)
+Box::Box() :_width(1), _height(1), _type(BoxType::FILLED)
 	{
 	_numOfBox++;
 	}
-	Box::Box(int x, int y) : _width(x), _height(y), _type(FILLED)
+	Box::Box(int x, int y) : _width(x), _height(y), _type(BoxType::FILLED)
 	{
 		_numOfBox++;
 	}
@@ -57,9 +57,9 @@ Box::Box() :_width(1), _height(1), _type(FILLED)
 	{
 		switch (_type) //CHANGE HERE FOR ANOTHER TYPE
 		{
-		case(HOLLOW):
+		case(BoxType::HOLLOW):
 			return "HOLLOW";
-		case(CHECKERED):
+		case(BoxType::CHECKERED):
 			return "CHECKERED";
 		default:
 			return "FILLED";
@@ -72,11 +72,11 @@ Box::Box() :_width(1), _height(1), _type(FILLED)
 	}
 
 
-	string Box::printBoxOutLine(int x, int y, Box::BoxType type) const//CHANGE HERE FOR ANOTHER BOX TYPE
+	string Box::printBoxOutLine(int x, int y, const Box::BoxType &type) const//CHANGE HERE FOR ANOTHER BOX TYPE
 	{
 		int temp = y;
 		string s;
-		if (CHECKERED == type) //CHECKERED
+		if (BoxType::CHECKERED == type) //CHECKERED
 		{
 			while (temp > 1)
 			{
@@ -109,14 +109,14 @@ Box::Box() :_width(1), _height(1), _type(FILLED)
 		}
 		do
 		{
-			if ((temp == y || (type == FILLED) || temp == 1)) //FILLED 
+			if ((temp == y || (type == BoxType::FILLED) || temp == 1)) //FILLED 
 			{
 				for (int i = 1; i <= x; ++i)
 				{
 					s += "x";
 				}
 			}
-			else if (!(temp <= 1) || (HOLLOW == type))//HOLLOW
+			else if (!(temp <= 1) || (BoxType::HOLLOW == type))//HOLLOW
 			{
 				s += "x";
 				for (int i = 1; i <= (x - 2); ++i)
@@ -130,4 +130,10 @@ Box::Box() :_width(1), _height(1), _type(FILLED)
 		} while (temp >= 1);
 
 		return s;
+	}
+
+	
+	std::ostream& operator<<(std::ostream& sout, Box a)
+	{
+		return sout;
 	}

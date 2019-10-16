@@ -13,11 +13,11 @@ using std::string;
 	class Box {
 
 	public:
-		enum BoxType{ FILLED, HOLLOW, CHECKERED };//Change here to add another type
+		enum class BoxType{ FILLED, HOLLOW, CHECKERED };//Change here to add another type
 		static int howMany();
 		Box();
 		Box(int x, int y);
-		Box(int x, int y,  BoxType z);
+		Box(int x, int y,  Box::BoxType z);
 		~Box();
 		int getWidth() const;
 		int getHeight()const;
@@ -30,9 +30,10 @@ using std::string;
 		int _width;
 		int _height;
 		BoxType _type;
-		string printBoxOutLine(int x, int y, Box::Box::BoxType type)const;
+		string printBoxOutLine(int x, int y,const Box::BoxType& type)const;
 	};
 
+	std::ostream& operator<<(std::ostream& sout, Box a);
 
 #endif // !BOX_HPP
 
