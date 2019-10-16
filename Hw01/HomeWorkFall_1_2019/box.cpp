@@ -136,5 +136,6 @@ string Box::printBoxOutLine(int x, int y, const Box::BoxType &type) const//CHANG
 	
 std::ostream& operator<<(std::ostream& sout, Box a)
 {
-	return sout;
+	
+	return sout<< a.printBoxOutLine(a._width,a._height,a._type);
 }

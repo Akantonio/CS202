@@ -11,8 +11,9 @@ using std::string;
 
 
 	class Box {
-
+		 friend std::ostream& operator<<(std::ostream& sout, Box a);
 	public:
+		
 		enum class BoxType{ FILLED, HOLLOW, CHECKERED };//Change here to add another type
 		static int howMany();
 		Box();
@@ -33,7 +34,7 @@ using std::string;
 		string printBoxOutLine(int x, int y,const Box::BoxType& type)const;
 	};
 
-	std::ostream& operator<<(std::ostream& sout, Box a);
+	
 
 #endif // !BOX_HPP
 
