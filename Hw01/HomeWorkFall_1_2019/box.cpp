@@ -1,5 +1,5 @@
-//Adrian Antonio CS202 Fall 9/22/19
-//Homework 1 using box test by Proffesor Hartman
+//Adrian Antonio CS202 Fall 10/15/19
+//Homework 3 using box test 2 by Proffesor Hartman
 
 #include<iostream>
 #include "box.hpp"
