@@ -13,7 +13,7 @@ int Box::howMany()
 	return _numOfBox;
 }
 
-Box::Box() :_width(1), _height(1), _type(Box::BoxType::FILLED)
+Box::Box() :_width(1), _height(1), _type(BoxType::FILLED)
 	{
 	_numOfBox++;
 	}
