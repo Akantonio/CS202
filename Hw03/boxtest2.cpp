@@ -8,7 +8,7 @@
 
 // Includes for code to be tested
 #include "box.hpp"   // For class Box
-#include "box.hpp"   // Double inclusion test
+#include "box.hpp"// Double inclusion test
 
 // Includes for testing package & code common to all test programs
 #include <iostream>     // for std::cout, std::endl, std::cin
