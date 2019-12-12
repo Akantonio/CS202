@@ -8,7 +8,7 @@
 
 // Includes for code to be tested
 #include "box.hpp"   // For class Box
-#include "box.hpp"// Double inclusion test
+#include "box.hpp"   // Double inclusion test
 
 // Includes for testing package & code common to all test programs
 #include <iostream>     // for std::cout, std::endl, std::cin
@@ -423,6 +423,37 @@ bool operator<(const Counter & a,
 // ************************************************************************
 // Test Suite Functions
 // ************************************************************************
+
+
+// test_class_Box_default_ctor
+// Test suite for class Box, default ctor
+// Pre: None.
+// Post:
+//     Pass/fail status of tests have been registered with t.
+//     Appropriate messages have been printed to cout.
+// Does not throw (No-Throw Guarantee)
+void test_class_Box_default_ctor(Tester & t)
+{
+    std::cout << "Test Suite: class Box, default ctor" << std::endl;
+
+    std::string s1;       // Holds type
+    int i1;          // Holds width and height
+
+    // Default construct const
+    const Box con1;
+
+    // Check default constructed const width
+    i1 = con1.getWidth();
+    t.test(i1 == 1, "Default ctor, width");
+
+    // Check default constructed const height
+    i1 = con1.getHeight();
+    t.test(i1 == 1, "Default ctor, height");
+
+    // Check default constructed type
+    s1 = con1.type();
+    t.test(s1 == "Filled", "Default ctor, type");
+}
 
 
 // test_class_Box_data_ctor

@@ -18,11 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{8E592D24-C358-4E5D-9F95-E539FCA9AC4A}</ProjectGuid>
+    <ProjectGuid>{83322629-592A-4440-886D-52C6E517742F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Hw03</RootNamespace>
+    <RootNamespace>Lab511</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -150,13 +153,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="box.cpp" />
-    <ClCompile Include="boxtest2.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="box.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
